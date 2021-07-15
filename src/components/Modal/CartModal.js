@@ -24,7 +24,11 @@ export class CartModal extends React.Component {
   };
 
   handlePlusOption = () => {
-    this.setState({ itemCount: this.state.itemCount + 1 });
+    if (this.state.itemCount < this.props.stock) {
+      this.setState({ itemCount: this.state.itemCount + 1 });
+    } else if (this.state.itemCount === this.props.stock) {
+      alert('재고가 부족합니다.');
+    }
   };
 
   changeOptionId = optionId => {

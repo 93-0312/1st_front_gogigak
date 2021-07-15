@@ -34,11 +34,13 @@ export class Cart extends Component {
           changeQuantity: this.state.cartData[cartIndex].quantity,
         }),
       });
-    }
-
-    if (newCartData[cartIndex].quantity === stock) {
+    } else if (newCartData[cartIndex].quantity === stock) {
       alert('구매할 수 있는 최대수량입니다.');
     }
+
+    // if (newCartData[cartIndex].quantity === stock) {
+    //   alert('구매할 수 있는 최대수량입니다.');
+    // }
   };
 
   quantityMinus = (cartItemId, cartIndex) => {

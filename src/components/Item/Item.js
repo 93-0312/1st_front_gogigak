@@ -24,7 +24,7 @@ class Item extends React.Component {
   render() {
     const { title, img, gram, price, options, id } = this.props;
     const { isModal } = this.state;
-
+    console.log(this.props.stock);
     return (
       <li className="item" onClick={this.goToDetail}>
         <div className="imgContainer">
@@ -37,6 +37,7 @@ class Item extends React.Component {
                 options={options}
                 productId={id}
                 cancelModal={this.cancelModal}
+                stock={this.props.stock}
               />
             )}
             <i className="fas fa-shopping-cart"></i>

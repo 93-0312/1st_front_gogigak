@@ -65,14 +65,16 @@ export class Nav extends Component {
 
               {this.state.isLogin === true || localStorage.getItem('token') ? (
                 <ul className="navigationMenu">
-                  <li
-                    className="navigationMenuList"
-                    onClick={() => {
-                      this.props.history.push('/mypage');
-                    }}
-                  >
-                    마이페이지
-                  </li>
+                  <Link to="/mypage" className="moveOtherPages">
+                    <li
+                      className="navigationMenuList"
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      마이페이지
+                    </li>
+                  </Link>
                   <li className="navigationMenuList">
                     <i
                       className="fas fa-shopping-cart"

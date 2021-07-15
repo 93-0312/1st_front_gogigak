@@ -69,6 +69,7 @@ export default class Main extends Component {
                       gram={item.grams}
                       title={item.name}
                       options={item.options}
+                      stock={item.stock}
                     />
                   );
                 }

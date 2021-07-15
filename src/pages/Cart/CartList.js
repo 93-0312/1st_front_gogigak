@@ -53,7 +53,7 @@ export default class CartList extends Component {
                 className="deleteBtn"
                 onClick={() => this.props.deleteCartItem(this.props.cartItemId)}
               >
-                x
+                <i class="far fa-times-circle"></i>
               </button>
             </li>
           </div>
