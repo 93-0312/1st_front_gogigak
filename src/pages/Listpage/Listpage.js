@@ -4,7 +4,7 @@ import Item from '../../components/Item/Item';
 
 import { API } from '../../config';
 
-import './ShoppingList.scss';
+import './Listpage.scss';
 
 const CATEGORY_LIST = [
   {
@@ -35,7 +35,7 @@ const CATEGORY_LIST = [
   },
 ];
 
-class ShoppingList extends Component {
+class Listpage extends Component {
   state = {
     items: [],
     orderingValue: '',
@@ -153,4 +153,4 @@ class ShoppingList extends Component {
   }
 }
 
-export default ShoppingList;
+export default Listpage;
