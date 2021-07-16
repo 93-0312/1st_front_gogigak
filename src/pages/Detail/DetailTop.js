@@ -83,6 +83,7 @@ export class DetailTop extends Component {
   };
 
   render() {
+    console.log(this.props.productStandard, '가격이상함');
     const { selectedOption } = this.state;
     return (
       <section className="detail-top-wrap">
@@ -97,7 +98,7 @@ export class DetailTop extends Component {
                 100g당 {this.props.productStandard}원
               </p>
               <p className="product-price">
-                기준가 {this.props.productPrice}원 (500g)
+                기준가 {this.props.productPrice}원 ({this.props.productGrams}g)
               </p>
               <div className="detail-top-option">
                 <p className="detail-top-tit">옵션</p>

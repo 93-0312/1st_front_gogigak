@@ -22,6 +22,7 @@ export class DetailDescContationer extends Component {
   //버튼 클릭 이벤트와 함수 생성 서버 연결
   addComment = e => {
     const authToken = localStorage.getItem('token');
+
     fetch(
       `http://ambitiouskyle.iptime.org:6389/products/${this.props.match.params.product}/reviews`,
       {
@@ -96,7 +97,7 @@ export class DetailDescContationer extends Component {
         response.json();
       })
       .then(response => {
-        alert('코멘티를 삭제하셨습니다.');
+        alert('리뷰를 삭제하셨습니다.');
         this.setState({
           commentList: this.state.commentList.filter(el => el.id !== id),
         });

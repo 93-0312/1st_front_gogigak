@@ -142,6 +142,20 @@ export class Cart extends Component {
       });
   };
 
+  deleteAll = cartItemId => {
+    const authToken = localStorage.getItem('token');
+
+    fetch(`${API.CART}/${cartItemId}`, {
+      method: 'DELETE',
+      headers: {
+        authorization: authToken,
+      },
+      body: cartItemId,
+    });
+
+    this.setState({ cartData: [] });
+  };
+
   render() {
     const { cartData } = this.state;
     const totalValue =
@@ -152,7 +166,6 @@ export class Cart extends Component {
     const orderCount = this.state.user.orderCount;
     let shippingFee = 2500;
     shippingFee = totalValue > 50000 || orderCount === 0 ? 0 : 2500;
-    console.log(this.state);
     return (
       <div className="cart">
         <p className="cartTitle">장바구니</p>
@@ -183,6 +196,11 @@ export class Cart extends Component {
                     stock={cartData.stock}
                   />
                 ))}
+                <div className="All">
+                  <div className="deleteAll" onClick={() => this.deleteAll(0)}>
+                    장바구니 전체삭제
+                  </div>
+                </div>
               </section>
 
               <section className="paymentContainer">

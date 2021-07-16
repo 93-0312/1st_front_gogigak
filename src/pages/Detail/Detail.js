@@ -42,7 +42,7 @@ export class Detail extends Component {
   };
   render() {
     const { productInfo } = this.state;
-    // console.log('state', this.state);
+    console.log('state', productInfo);
     //console.log('options', this.state.productInfo.options);
     //console.log('tabOn', this.state.isTabOn);
     return (
@@ -52,10 +52,11 @@ export class Detail extends Component {
             <DetailTop
               productImg={productInfo.thumbnail}
               productName={productInfo.name}
-              productStandard={productInfo.grams}
+              productStandard={productInfo.pricePer100g}
               productPrice={productInfo.price}
               productOption={productInfo.options}
               productId={this.props.match.params.product}
+              productGrams={productInfo.grams}
             />
             <div className="detail-tab">
               <ul>

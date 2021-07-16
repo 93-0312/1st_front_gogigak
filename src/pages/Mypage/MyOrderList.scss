@@ -1,5 +1,9 @@
 @import '../../styles/variables.scss';
 
+.listContent::-webkit-scrollbar {
+  display: none;
+}
+
 .orderList {
   @include flex-center;
 

@@ -23,6 +23,11 @@ export default class CouponModal extends Component {
               />
             ))}
           </div>
+          <div className="closeCouponContainer">
+            <span className="closeCoupon" onClick={this.props.toggleCoupon}>
+              닫기
+            </span>
+          </div>
         </div>
       </section>
     );

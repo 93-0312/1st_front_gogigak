@@ -14,7 +14,7 @@ export class CommnetList extends Component {
                   onClick={() =>
                     this.props.deletedComment(this.props.commentId)
                   }
-                  className={this.props.productCloseBtn ? 'off' : ''}
+                  className={this.props.productCloseBtn ? '' : 'off'}
                 >
                   <i class="fas fa-times"></i>
                 </button>

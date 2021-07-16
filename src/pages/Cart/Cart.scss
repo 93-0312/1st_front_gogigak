@@ -259,7 +259,6 @@
 }
 
 .couponOptionContainer {
-  overflow: scroll;
 }
 
 .shippingPrice-basic {
@@ -288,4 +287,16 @@
   // background-color: rgba(0, 0, 0, 0.8);
   // z-index: 55;
   opacity: 0.2;
+}
+
+.test i {
+  opacity: 1;
+}
+
+.All {
+  text-align: right;
+}
+.deleteAll {
+  margin-top: 20px;
+  cursor: pointer;
 }
